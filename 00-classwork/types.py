@@ -1,3 +1,6 @@
+
+# los tipos es una mejora de calidad de vida
+
 name : str = "diego"
 edad : int = 12
 
@@ -29,3 +32,50 @@ print(
     "juan" : 10,
     "diego" : 20,
 }))
+
+
+# tuplas
+t : tuple[int,int,int] = (1,2,3)
+
+
+class Persona:
+    def __init__(self,name : str, age : int) -> None:
+        self.name = name
+        self.age = age
+    
+    def salute(self) -> str:
+        """Envia un saludo""" #Añade documentacion
+        return f"Hola, soy {self.name} y tengo {self.age} años"
+    
+
+def print_info(persona : Persona) -> None:
+    print(persona.salute())
+
+
+def carga_personas() -> list[Persona]:
+    datos = []
+    datos.append(Persona("Diego",30))
+    datos.append(Persona("juan",20))
+    datos.append(Persona("pedro",10))
+
+    return datos
+
+p = carga_personas()
+#p. trabaja como lista, p[0]. trabaja con indice de una persona
+# se usa "Persona" si se declara un metodo antes que la clase
+
+# example
+class A:
+    def __init__(self, b : list["B"]) -> None:
+        self.b = b
+
+class B:
+    def __init__(self, a : A) -> None:
+        self.a = a
+
+
+def AddExample(a: int, b : int) -> int:
+    return a+b
+
+resExample = AddExample(10,12)
+print(resExample)
