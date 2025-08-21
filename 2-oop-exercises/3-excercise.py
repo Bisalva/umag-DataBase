@@ -27,7 +27,7 @@ class Seller(Employes):
     def calculate_salary(self):
         total_commissions = sum(self.commissions)
         self.salary += total_commissions
-        return f"{self.salary}"
+        return self.salary
 
 
 class Manager(Employes):
@@ -37,7 +37,7 @@ class Manager(Employes):
 
     def calculate_salary(self):
         self.salary = self.salary + (self.salary * (self.manager_bonus/100) )
-        return f"{self.salary:.0f}"
+        return self.salary
 
 seller = Seller("Juan", "Pérez", "12345678-9", 500000)
 seller.add_commission(50000)
