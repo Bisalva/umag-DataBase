@@ -24,15 +24,17 @@ class Rectangle:
             self._high = set_high
         else:
             print("El alto debe ser un valor positivo")
+
     @property
     def area(self):
         return self._width * self._high
+    
     @property
     def perimeter(self):
         return (self._width + self._high) * 2
 
     def __str__(self):
-        return (f"Rectángulo : {self._width} , {self._high} ; Area : {self.area}, Perimetro : {self.perimeter}")
+        return (f"Rectangulo : {self._width} , {self._high} ; Area : {self.area}, Perimetro : {self.perimeter}")
     
 rect = Rectangle(5, 3)
 print(rect.area)
