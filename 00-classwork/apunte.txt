@@ -1,3 +1,7 @@
 migrar a carpeta wsl
 usar el home de wsl
 afectara a futuras tareas
+
+
+dataclasses:
+valors con "=" deben ir al final del constructor
