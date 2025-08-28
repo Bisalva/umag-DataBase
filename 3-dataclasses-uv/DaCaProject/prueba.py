@@ -1,5 +1,6 @@
 from dataclasses import dataclass
-from models import calificacion
+from calificacion import Calificacion
+from datetime import date
 
 
 @dataclass
@@ -8,7 +9,7 @@ class Prueba :
     nombre : str
     materia : str
     tipo : str #parcial,final,quiz,tarea
-    fecha : int #date ???
+    fecha : date
     puntaje_maximo : float
     peso_porcentual : float # 0-100
-    #calificaciones : List[calificacion] ???
+    calificaciones : list[Calificacion]
